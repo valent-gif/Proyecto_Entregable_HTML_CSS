@@ -15,7 +15,22 @@
 
 /*--ESPACIOS--*/
 
+    --Espacios-pequeño: 0.5rem:
+    --Espacios-medianos: 1rem:
+    --Espacios-grande: 2rem:
 
+/*---BORDES---*/
 
+    --radio: o.75rem;
+}
+/* ===== 2. BASE ===== */
+*, *::before, *::after { box-sizing: border-box; }
 
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
 }
