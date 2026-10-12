@@ -1,36 +1,35 @@
-/* ------ VARIABLES ------ */
+/* ===== 1. VARIABLES ===== */
 :root {
-/* ----COLORES---- */
+  /* Colores */
+  --color-fondo: #fff8ee;
+  --color-texto: #3b2a20;
+  --color-primario: #c8742b;
+  --color-acento: #8a3b12;
+  --color-sombra: rgba(59, 42, 32, 0.15);
 
-    --Color-fondo: 
-    --Color-texto:
-    --Color-primario:
-    --Color-acento:
-    --Color-sombra:
+  /* Tipografía */
+  --fuente-titulo: Georgia, serif;
+  --fuente-texto: "Segoe UI", Arial, sans-serif;
 
-/*--TIPOGRAFIA--*/
+  /* Espacios */
+  --espacio-pequeno: 0.5rem;
+  --espacio-mediano: 1rem;
+  --espacio-grande: 2rem;
 
-    --Fuente-Titulo: Georgia serif;
-    --Fuente-Texto: "Segoe UI", Arial, sans-serif;
-
-/*--ESPACIOS--*/
-
-    --Espacios-pequeño: 0.5rem:
-    --Espacios-medianos: 1rem:
-    --Espacios-grande: 2rem:
-
-/*---BORDES---*/
-
-    --radio: o.75rem;
+  /* Bordes */
+  --radio: 0.75rem;
 }
-/* ===== 2. BASE ===== */
-*, *::before, *::after { box-sizing: border-box; }
 
-body {
-  margin: 0;
-  font-family: var(--fuente-texto);
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
+/* ===== 3. COLOR Y FONDOS ===== */
+
+/* Encabezado: fondo múltiple (gradiente semitransparente sobre una foto) */
+.encabezado {
+  background-image:
+    linear-gradient(135deg, rgba(138, 59, 18, 0.85), rgba(200, 116, 43, 0.65)),
+    url("../images/torta_chocolate.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: var(--espacio-grande) var(--espacio-mediano);
+  text-align: center;
 }
