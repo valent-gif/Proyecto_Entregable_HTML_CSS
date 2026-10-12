@@ -33,3 +33,27 @@
   padding: var(--espacio-grande) var(--espacio-mediano);
   text-align: center;
 }
+
+/* Tarjetas de productos: fondo blanco y sombra con alfa */
+.tarjeta {
+  background-color: white;
+  border-radius: var(--radio);
+  box-shadow: 0 4px 12px var(--color-sombra);
+  padding: var(--espacio-mediano);
+  margin-bottom: var(--espacio-mediano);
+}
+
+/* Opiniones: fondo con alfa */
+.opiniones blockquote {
+  background-color: rgba(200, 116, 43, 0.12);
+  margin: 0 0 var(--espacio-mediano);
+  padding: var(--espacio-mediano);
+}
+
+/* Pie de página */
+.pie {
+  background-color: var(--color-acento);
+  color: white;
+  padding: var(--espacio-mediano);
+  text-align: center;
+}
