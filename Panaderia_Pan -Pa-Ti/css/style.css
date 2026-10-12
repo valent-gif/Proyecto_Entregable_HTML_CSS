@@ -57,3 +57,41 @@
   padding: var(--espacio-mediano);
   text-align: center;
 }
+
+
+
+/* ===== 4. TIPOGRAFÍA Y TEXTO ===== */
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--color-acento);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p, li {
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: underline;
+}
+
+.encabezado a {
+  color: white;
+  text-decoration: none;
+}
