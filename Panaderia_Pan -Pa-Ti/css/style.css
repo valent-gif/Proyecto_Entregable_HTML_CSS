@@ -267,3 +267,52 @@ input[type="email"] {
   font: inherit;
   cursor: pointer;
 }
+/* ===== 10. INTERACCIÓN ===== */
+a:hover {
+  color: var(--color-acento);
+}
+
+.encabezado nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: white;
+  color: var(--color-fondo);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+.reservas form:focus-within {
+  box-shadow: 0 0 0 4px var(--color-sombra);
+}
+
+.reservas button:hover {
+  background-color: var(--color-acento);
+}
+
+section:target {
+  background-color: rgba(200, 116, 43, 0.12);
+  padding: var(--espacio-mediano);
+  border-radius: var(--radio);
+}
+
+/* ===== 11. ANIMACIÓN ===== */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjeta {
+  animation: aparecer 0.6s ease-out;
+}
