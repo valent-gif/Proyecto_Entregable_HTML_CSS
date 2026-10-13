@@ -129,24 +129,21 @@ Gana `.encabezado nav a:hover` porque suma 2 clases (`.encabezado` y `:hover`) y
 ![Conflicto 2: las reglas .encabezado a y a:hover aparecen tachadas](capturas/conflicto-2.png)
 
 
-### Conflicto 3 (resuelto por orden): el tamaño del título en el celular
+### Conflicto 3: el tamaño del título frente al estilo del navegador
 
 Reglas que compiten sobre el mismo `<h1>`:
 
 ```css
-h1 { font-size: 2.5rem; }                       /* (0,0,1) */  ← fuera del @media
+/* Hoja del navegador (user agent stylesheet) */
+h1 { font-size: 2em; }          /* (0,0,1) → 32 px */
 
-@media (max-width: 600px) {
-  h1 { font-size: 1.75rem; }                    /* (0,0,1) */  ← dentro del @media, al final del archivo
-}
+/* Mi hoja de estilos */
+h1 { font-size: 2.5rem; }       /* (0,0,1) → 40 px */
 ```
 
-Las dos tienen la misma especificidad `(0,0,1)`, y el `@media` no suma puntos. Por eso gana la que está **después** en el archivo, y por eso el bloque `@media` va al final de la hoja. A 360 px el título mide 1.75 rem y la regla de 2.5 rem aparece tachada.
+Las dos tienen la misma especificidad `(0,0,1)`, pero este empate no se resuelve por orden dentro de mi archivo. Gana mi regla porque el navegador da prioridad a los estilos del autor (mi `style.css`) sobre los suyos por defecto. Por eso el título se ve de 2.5 rem (40 px) y no de 2 em (32 px). En el inspector, el `font-size: 2em` del *user agent stylesheet* aparece tachado.
 
 ![Conflicto 3: font-size 2.5rem tachado a 360 px](capturas/conflicto-3.png)
-
-
-
 
 ---
 
