@@ -312,18 +312,3 @@ El `@media` va **al final** del archivo porque no suma especificidad: gana por o
 ```
 
 ---
-
-## 10. Capturas
-
-### Página principal
-
-| Escritorio | Celular (360 px) |
-|---|---|
-| ![index en escritorio](capturas/index-escritorio.png) | ![index en 360 px](capturas/index-360.png) |
-
-### Segunda página (precios y reservas)
-
-| Escritorio | Celular (360 px) |
-|---|---|
-| ![segunda página en escritorio](capturas/segunda-escritorio.png) | ![segunda página en 360 px](capturas/segunda-360.png) |
-
