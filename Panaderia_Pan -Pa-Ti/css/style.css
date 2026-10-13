@@ -133,3 +133,13 @@ iframe {
   border: 0;
   border-radius: var(--radio);
 }
+
+
+/*--- 6. NAVEGACION --- */
+
+.encabezado nav ul {
+  list-style: none;
+  margin: var(--espacio-mediano) 0 0;
+  padding: 0;
+}
+
