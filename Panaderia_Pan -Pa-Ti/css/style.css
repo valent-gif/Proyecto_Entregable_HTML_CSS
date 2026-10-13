@@ -142,4 +142,29 @@ iframe {
   margin: var(--espacio-mediano) 0 0;
   padding: 0;
 }
+.encabezado nav li {
+  display: inline-block;
+  margin: var(--espacio-pequeno);
+}
 
+.encabezado nav a {
+  display: inline-block;
+  padding: var(--espacio-pequeno) var(--espacio-mediano);
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===== 7. TABLAS Y LISTAS ===== */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid var(--color-primario);
+  padding: var(--espacio-pequeno) var(--espacio-mediano);
+  text-align: left;
+}
