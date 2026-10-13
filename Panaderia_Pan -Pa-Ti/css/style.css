@@ -1,3 +1,12 @@
+/* ===================================================
+   PAN PA' TI · HOJA DE ESTILOS (compartida por las 2 páginas)
+   Orden: 1 Variables · 2 Base · 3 Tipografía · 4 Color y fondos
+          5 Modelo de cajas · 6 Navegación · 7 Tablas y listas
+          8 Selectores · 9 Formulario · 10 Interacción
+          11 Animación · 12 Responsive
+   =================================================== */
+
+
 /* ===== 1. VARIABLES ===== */
 :root {
   /* Colores */
@@ -20,49 +29,35 @@
   --radio: 0.75rem;
 }
 
-/* ===== 3. COLOR Y FONDOS ===== */
 
-/* Encabezado: fondo múltiple (gradiente semitransparente sobre una foto) */
-.encabezado {
-  background-image:
-    linear-gradient(135deg, rgba(138, 59, 18, 0.85), rgba(200, 116, 43, 0.65)),
-    url("../images/torta_chocolate.jpeg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: var(--espacio-grande) var(--espacio-mediano);
-  text-align: center;
+/* ===== 2. BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Tarjetas de productos: fondo blanco y sombra con alfa */
-.tarjeta {
-  background-color: white;
-  border-radius: var(--radio);
-  box-shadow: 0 4px 12px var(--color-sombra);
-  padding: var(--espacio-mediano);
-  margin-bottom: var(--espacio-mediano);
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
 }
 
-/* Opiniones: fondo con alfa */
-.opiniones blockquote {
-  background-color: rgba(200, 116, 43, 0.12);
-  margin: 0 0 var(--espacio-mediano);
-  padding: var(--espacio-mediano);
-}
-
-/* Pie de página */
-.pie {
-  background-color: var(--color-acento);
-  color: white;
-  padding: var(--espacio-mediano);
-  text-align: center;
+/* Multimedia fluida: nunca más ancha que su contenedor (clave en 360 px) */
+img,
+iframe,
+video {
+  max-width: 100%;
 }
 
 
-
-/* ===== 4. TIPOGRAFÍA Y TEXTO ===== */
-
-h1, h2, h3 {
+/* ===== 3. TIPOGRAFÍA Y TEXTO ===== */
+h1,
+h2,
+h3 {
   font-family: var(--fuente-titulo);
   line-height: 1.2;
 }
@@ -82,7 +77,12 @@ h3 {
   font-size: 1.25rem;
 }
 
-p, li {
+/* Texto largo: se parte en vez de salirse de la pantalla */
+p,
+li,
+td,
+th,
+cite {
   overflow-wrap: anywhere;
 }
 
@@ -97,8 +97,43 @@ a {
 }
 
 
-/* ===== 5. MODELO DE CAJAS ===== */
+/* ===== 4. COLOR Y FONDOS ===== */
+/* Fondo múltiple: gradiente con alfa sobre una foto */
+.encabezado {
+  background-image:
+    linear-gradient(135deg, rgba(138, 59, 18, 0.85), rgba(200, 116, 43, 0.65)),
+    url("../images/torta_chocolate.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: var(--espacio-grande) var(--espacio-mediano);
+  text-align: center;
+}
 
+.tarjeta {
+  background-color: white;
+  border-radius: var(--radio);
+  box-shadow: 0 4px 12px var(--color-sombra);
+  padding: var(--espacio-mediano);
+  margin-bottom: var(--espacio-mediano);
+}
+
+.opiniones blockquote {
+  background-color: rgba(200, 116, 43, 0.12);
+  margin: 0 0 var(--espacio-mediano);
+  padding: var(--espacio-mediano);
+}
+
+.pie {
+  background-color: var(--color-acento);
+  color: white;
+  padding: var(--espacio-mediano);
+  text-align: center;
+}
+
+
+/* ===== 5. MODELO DE CAJAS ===== */
+/* Contenedor centrado con margin auto y ancho máximo */
 main {
   max-width: 60rem;
   margin: 0 auto;
@@ -108,6 +143,13 @@ main {
 section {
   margin-bottom: var(--espacio-grande);
 }
+
+.encabezado img {
+  display: block;
+  margin: 0 auto var(--espacio-mediano);
+  border-radius: 50%;
+}
+
 .tarjeta {
   border: 1px solid var(--color-sombra);
   border-left: 6px solid var(--color-primario);
@@ -116,12 +158,14 @@ section {
 
 .tarjeta__imagen {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
   border-radius: var(--radio);
   margin-bottom: var(--espacio-pequeno);
 }
 
+/* Si algo no cabe, el scroll queda dentro de la sección, no en la página */
 .precios,
 .como-llegar {
   overflow-x: auto;
@@ -129,19 +173,21 @@ section {
 
 iframe {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 37.5rem;
+  height: 22rem;
   border: 0;
   border-radius: var(--radio);
 }
 
 
-/*--- 6. NAVEGACION --- */
-
+/* ===== 6. NAVEGACIÓN ===== */
 .encabezado nav ul {
   list-style: none;
   margin: var(--espacio-mediano) 0 0;
   padding: 0;
 }
+
 .encabezado nav li {
   display: inline-block;
   margin: var(--espacio-pequeno);
@@ -154,6 +200,7 @@ iframe {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
 
 /* ===== 7. TABLAS Y LISTAS ===== */
 .tabla {
@@ -191,7 +238,9 @@ iframe {
   background-color: rgba(138, 59, 18, 0.08);
   border-top: 4px solid var(--color-acento);
   padding: var(--espacio-mediano);
+  margin-bottom: var(--espacio-grande);
 }
+
 
 /* ===== 8. SELECTORES ===== */
 /* Combinador de hijo directo */
@@ -221,10 +270,11 @@ h2::before {
   color: var(--color-primario);
 }
 
-/* Pie de página */
 .pie a {
   color: white;
 }
+
+
 /* ===== 9. FORMULARIO ===== */
 .reservas form {
   max-width: 30rem;
@@ -267,6 +317,8 @@ input[type="email"] {
   font: inherit;
   cursor: pointer;
 }
+
+
 /* ===== 10. INTERACCIÓN ===== */
 a:hover {
   color: var(--color-acento);
@@ -301,6 +353,7 @@ section:target {
   border-radius: var(--radio);
 }
 
+
 /* ===== 11. ANIMACIÓN ===== */
 @keyframes aparecer {
   from {
@@ -316,7 +369,29 @@ section:target {
 .tarjeta {
   animation: aparecer 0.6s ease-out;
 }
-/* ===== 12. RESPONSIVE (CELULAR) ===== */
+
+
+/* ===== 12. RESPONSIVE ===== */
+/* Pantallas grandes (opcional): las tarjetas se ponen en 3 columnas.
+   Si en clase no vieron grid, borra este bloque: el sitio funciona igual
+   en una sola columna. */
+@media (min-width: 48rem) {
+  .producto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacio-mediano);
+  }
+
+  .producto > h2 {
+    grid-column: 1 / -1;
+  }
+
+  .producto .tarjeta {
+    margin-bottom: 0;
+  }
+}
+
+/* Celular (360 px entra aquí): va al FINAL para ganar por orden */
 @media (max-width: 600px) {
   main {
     padding: var(--espacio-pequeno);
@@ -329,6 +404,10 @@ section:target {
 
   h2 {
     font-size: 1.4rem;
+  }
+
+  .encabezado {
+    padding: var(--espacio-mediano) var(--espacio-pequeno);
   }
 
   .encabezado nav li {
@@ -344,6 +423,12 @@ section:target {
   .tabla td {
     padding: var(--espacio-pequeno);
   }
-  @media (max-width:600px) { 
+
+  .tarjeta__imagen {
+    height: 10rem;
+  }
+
+  iframe {
+    height: 18rem;
   }
 }
