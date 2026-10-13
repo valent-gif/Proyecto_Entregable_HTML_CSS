@@ -192,3 +192,78 @@ iframe {
   border-top: 4px solid var(--color-acento);
   padding: var(--espacio-mediano);
 }
+
+/* ===== 8. SELECTORES ===== */
+/* Combinador de hijo directo */
+.tarjeta > h3 {
+  margin: 0 0 var(--espacio-pequeno);
+  color: var(--color-acento);
+}
+
+/* Combinador de hermano adyacente */
+h2 + p {
+  font-size: 1.1rem;
+}
+
+/* Pseudoclase estructural: filas pares de la tabla */
+.tabla tbody tr:nth-child(even) {
+  background-color: rgba(200, 116, 43, 0.12);
+}
+
+/* Selector de atributo + pseudoelemento: marca los enlaces externos */
+a[target="_blank"]::after {
+  content: " \2197";
+}
+
+/* Pseudoelemento decorativo */
+h2::before {
+  content: "\2726\00a0";
+  color: var(--color-primario);
+}
+
+/* Pie de página */
+.pie a {
+  color: white;
+}
+/* ===== 9. FORMULARIO ===== */
+.reservas form {
+  max-width: 30rem;
+  padding: var(--espacio-mediano);
+  border-radius: var(--radio);
+  background-color: white;
+  box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.reservas label {
+  display: block;
+  margin-top: var(--espacio-mediano);
+  font-weight: bold;
+}
+
+.reservas input,
+.reservas select,
+.reservas textarea {
+  display: block;
+  width: 100%;
+  padding: var(--espacio-pequeno);
+  border: 1px solid var(--color-primario);
+  border-radius: var(--radio);
+  background-color: white;
+  font: inherit;
+}
+
+/* Misma especificidad que la regla anterior: gana por ir después */
+input[type="email"] {
+  border-color: var(--color-acento);
+}
+
+.reservas button {
+  margin-top: var(--espacio-mediano);
+  padding: var(--espacio-pequeno) var(--espacio-grande);
+  border: 0;
+  border-radius: var(--radio);
+  background-color: var(--color-primario);
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
