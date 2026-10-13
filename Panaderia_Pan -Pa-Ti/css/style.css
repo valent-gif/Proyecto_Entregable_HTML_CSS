@@ -168,3 +168,27 @@ iframe {
   padding: var(--espacio-pequeno) var(--espacio-mediano);
   text-align: left;
 }
+
+.tabla th {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.informacion ul {
+  list-style: square;
+}
+
+.informacion ol {
+  list-style: decimal;
+}
+
+.informacion li::marker {
+  color: var(--color-primario);
+  font-weight: bold;
+}
+
+.recomendaciones {
+  background-color: rgba(138, 59, 18, 0.08);
+  border-top: 4px solid var(--color-acento);
+  padding: var(--espacio-mediano);
+}
