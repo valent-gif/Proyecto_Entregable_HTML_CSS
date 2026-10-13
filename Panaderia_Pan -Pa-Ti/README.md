@@ -114,9 +114,6 @@ Gana `.encabezado a` porque tiene 1 clase contra 0 clases de `a`. Por eso los en
 
 ![Conflicto 1: la regla a aparece tachada](capturas/conflicto-1.png)
 
-
-
-
 ### Conflicto 2: el color del enlace al pasar el mouse
 
 Reglas que compiten sobre el mismo enlace del menú cuando tiene el mouse encima:
@@ -130,9 +127,6 @@ a:hover                   { color: var(--color-acento); }      /* (0,1,1) */
 Gana `.encabezado nav a:hover` porque suma 2 clases (`.encabezado` y `:hover`) y 2 etiquetas (`nav` y `a`), contra 1 clase y 1 etiqueta de las otras dos. Si no existiera esa tercera regla, `a:hover` pondría el texto café oscuro sobre el fondo café del encabezado y casi no se leería.
 
 ![Conflicto 2: las reglas .encabezado a y a:hover aparecen tachadas](capturas/conflicto-2.png)
-
-
-
 
 
 ### Conflicto 3 (resuelto por orden): el tamaño del título en el celular
