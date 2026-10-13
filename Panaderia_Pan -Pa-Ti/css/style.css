@@ -108,4 +108,28 @@ main {
 section {
   margin-bottom: var(--espacio-grande);
 }
+.tarjeta {
+  border: 1px solid var(--color-sombra);
+  border-left: 6px solid var(--color-primario);
+  overflow: hidden;
+}
 
+.tarjeta__imagen {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radio);
+  margin-bottom: var(--espacio-pequeno);
+}
+
+.precios,
+.como-llegar {
+  overflow-x: auto;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
+  border-radius: var(--radio);
+}
